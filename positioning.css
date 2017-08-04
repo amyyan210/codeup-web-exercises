@@ -1,0 +1,54 @@
+h1 {
+    margin-bottom:50px;
+}
+
+.box {
+    border:1px solid black;
+    height:50px;
+    width:50px;
+    padding:10px;
+    margin-top:0px;
+    margin-bottom:50px;
+    margin-right:50px;
+    font-weight:bold;
+    color:#fff;
+    float:left;
+}
+
+#box1 {
+    background-color:red;
+}
+
+#box2 {
+    background-color:orange;
+}
+
+#box3 {
+    background-color:yellow;
+}
+
+#box4 {
+    background-color:green;
+}
+
+#box5 {
+    background-color:blue;
+}
+
+#box6 {
+    background-color:violet;
+}
+
+#container1 {
+    float:left;
+}
+
+#container2 {
+    clear:left;
+}
+
+.img {
+    position:relative;
+    bottom:100px;
+    left:40px;
+}
