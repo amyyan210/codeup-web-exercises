@@ -1,0 +1,32 @@
+body {
+    font-family: 'Trebuchet MS',verdana;
+    margin:10px;
+}
+
+aside {
+    background-color: #999f8e;
+    width:18%;
+    float:left;
+    height:100vh;
+    padding:1%;
+}
+
+main {
+    background-color: #d2d8c7;
+    width:70%;
+    float:left;
+    height:100vh;
+    padding:5%;
+}
+
+ul li {
+    list-style:none;
+}
+
+a {
+    color:#000;
+}
+
+h1 {
+    color:#143F28;
+}
