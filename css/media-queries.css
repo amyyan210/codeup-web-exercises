@@ -5,11 +5,15 @@ body {
 }
 
 .header-img > img {
-    /*max-width: 100%;*/
+    max-width: 100%;
 }
 
 .nav-links {
     list-style-type: none;
+}
+
+.sub-section > * {
+    font-style: italic;
 }
 
 #social-media-links > ul {
@@ -167,10 +171,6 @@ body {
     .sub-section {
         margin-top: 2em;
         margin-bottom: 4em;
-    }
-
-    .sub-section > * {
-        font-style: italic;
     }
 
     .sub-section > h2 {
