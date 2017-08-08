@@ -1,11 +1,11 @@
 body {
     font-family: sans-serif;
-    width: 95%;
+    /*width: 95%;*/
     margin: 2.5% auto;
 }
 
 .header-img > img {
-    max-width: 100%;
+    /*max-width: 100%;*/
 }
 
 .nav-links {
@@ -24,13 +24,13 @@ body {
 
 @media screen and (min-width: 901px) {
     .header-img > img {
-        width: 900px;
+        /*width: 900px;*/
         margin: 0 auto;
         display: block;
     }
     .header-img {
         clear:both;
-        width: 100%;
+        /*width: 100%;*/
     }
 
     .nav-links {
@@ -57,14 +57,14 @@ body {
 
     .main {
         box-sizing: border-box;
-        width:70%;
+        /*width:70%;*/
         float: left;
         padding-right:5%;
     }
 
     .sub-section {
         box-sizing: border-box;
-        width: 30%;
+        /*width: 30%;*/
         float: left;
     }
 
@@ -105,14 +105,14 @@ body {
 
     .main {
         box-sizing: border-box;
-        width:70%;
+        /*width:70%;*/
         float: left;
         padding-right:5%;
     }
 
     .sub-section {
         box-sizing: border-box;
-        width: 30%;
+        /*width: 30%;*/
         float: left;
     }
 
