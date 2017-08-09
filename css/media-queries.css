@@ -1,7 +1,7 @@
+/* Applies to all screen sizes */
 body {
     font-family: sans-serif;
     /*width: 95%;*/
-    margin: 2.5% auto;
 }
 
 .header-img > img {
@@ -26,6 +26,21 @@ body {
     font-size:2em;
 }
 
+footer {
+    padding-top: 5em;
+    clear: both;
+    overflow: auto;
+}
+
+footer p {
+    float: left;
+}
+
+.alert-info {
+    margin: 10px;
+}
+
+/* For screens larger than 900 px */
 @media screen and (min-width: 901px) {
     .header-img > img {
         /*width: 900px;*/
@@ -34,7 +49,7 @@ body {
     }
     .header-img {
         clear:both;
-        /*width: 100%;*/
+        width: 100%;
     }
 
     .nav-links {
@@ -71,18 +86,9 @@ body {
         /*width: 30%;*/
         float: left;
     }
-
-    footer {
-        padding-top: 15em;
-        clear: both;
-        overflow: auto;
-    }
-
-    footer p {
-        float: left;
-    }
 }
 
+/* For screens larger than 768 px and smaller than 901 px */
 @media screen and (min-width: 769px) and (max-width:900px) {
 
     h1 {
@@ -119,18 +125,9 @@ body {
         /*width: 30%;*/
         float: left;
     }
-
-    footer {
-        padding-top: 15em;
-        clear: both;
-        overflow: auto;
-    }
-
-    footer p {
-        float: left;
-    }
 }
 
+/* For screens smaller than 768 px */
 @media screen and (max-width: 768px) {
 
     .alert-info {
