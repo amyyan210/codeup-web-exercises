@@ -33,10 +33,6 @@ h1 {
     text-align:center;
 }
 
-.panel-footer {
-    text-align:right;
-}
-
 /* For extra small devices */
 @media screen and (max-width:768px) {
     .hidden-xs {
