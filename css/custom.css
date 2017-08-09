@@ -39,3 +39,7 @@ h1 {
         display:none;
     }
 }
+
+#main h3 {
+    padding-left:1%;
+}

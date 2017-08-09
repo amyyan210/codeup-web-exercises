@@ -47,8 +47,9 @@
     </div>
 </div>
 
-<div>
+<div id="main">
     <h3>Build your own pizza!</h3>
+    <hr>
     <ul class="nav nav-tabs">
         <li role="presentation" class="active"><a href="#"><span class="badge">1 </span> Size and crust</a></li>
         <li role="presentation"><a href="#"><span class="badge">2 </span> Cheese and sauce</a></li>
@@ -67,7 +68,7 @@
                 <h3 class="panel-title">Hand tossed</h3>
             </div>
             <div class="panel-body">
-                <p>Garlic-seasoned crust with a rich, buttery taste</p>
+                <p>Garlic-seasoned crust with a rich, buttery taste.</p>
                 <ul class="list-group">
                     <li class="list-group-item list-group-item-info"><input type="radio" name="crust-type" value="handtossed-small">
                         Small (10")</li>
@@ -96,7 +97,7 @@
     </div>
         <div class="panel-footer text-right">
             <button type="button" class="btn btn-default btn-primary">
-                Next step <span class="glyphicon glyphicon-triangle-right glyphicon-align-right aria-hidden="true"></span>
+                Next step <span class="glyphicon glyphicon-triangle-right glyphicon-align-right" aria-hidden="true"></span>
             </button>
         </div>
 </div>
@@ -148,11 +149,11 @@
         <div class="btn-group" role="group">
             <button type="button" class="btn btn-default btn-primary">
                 <span class="glyphicon glyphicon-triangle-left
-                glyphicon-align-right aria-hidden="true"></span> Previous step
+                glyphicon-align-right" aria-hidden="true"></span> Previous step
             </button>
             <button type="button" class="btn btn-default btn-primary">
                 Next step
-                <span class="glyphicon glyphicon-triangle-right glyphicon-align-right aria-hidden="true"></span>
+                <span class="glyphicon glyphicon-triangle-right glyphicon-align-right" aria-hidden="true"></span>
             </button>
         </div>
     </div>
@@ -161,58 +162,78 @@
 <!-- Toppings section -->
 <div class="panel panel-default panel-info">
     <div class="panel-heading">
-        <h3 class="panel-title">Choose cheese and sauce</h3>
+        <h3 class="panel-title">Choose toppings</h3>
     </div>
-    <div class="panel-body">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h3 class="panel-title">Cheese?</h3>
+        <!--Body of toppings panel-->
+        <div class="panel-body">
+                    <!--Nested panel of meats-->
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Choose meats</h3>
+                </div>
+                <div class="panel-body list-group-item-info">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="beef">
+                            Beef
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="ham">
+                            Ham
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="philly-steak">
+                            Philly steak
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="bacon">
+                            Bacon
+                        </label></div>
+                </div>
             </div>
-            <div class="panel-body list-group-item-info">
-                <p><strong>Cheese</strong></p>
-                <select class="form-control">
-                    <option>Light</option>
-                    <option>Normal</option>
-                    <option>Extra</option>
-                    <option>Double</option>
-                </select>
+                    <!--Sibling panel of non-meats-->
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Choose non-meats</h3>
+                </div>
+                <div class="panel-body list-group-item-info check-box">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="green-peppers">
+                            Green peppers
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="mushrooms">
+                            Mushrooms
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="onions">
+                            Onions
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="jalapenos">
+                            Jalapenos
+                        </label></div>
+                </div>
             </div>
         </div>
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h3 class="panel-title">Sauce?</h3>
-            </div>
-            <div class="panel-body list-group-item-info">
-                <p><strong>Sauce</strong></p>
-                <select class="form-control">
-                    <option>Tomato sauce</option>
-                    <option>Marinara sauce</option>
-                    <option>BBQ sauce</option>
-                    <option>Alfredo Sauce</option>
-                </select>
-            </div>
-            <div class="panel-body list-group-item-info">
-                <p><strong>How much?</strong></p>
-                <select class="form-control">
-                    <option>Light</option>
-                    <option>Normal</option>
-                    <option>Extra</option>
-                </select>
-            </div>
-        </div>
-    </div>
-    <div class="panel-footer text-right">
-        <div class="btn-group" role="group">
+        <div class="panel-footer text-right">
             <button type="button" class="btn btn-default btn-primary">
-                <span class="glyphicon glyphicon-triangle-left
-                glyphicon-align-right aria-hidden="true"></span> Previous step
-            </button>
-            <button type="button" class="btn btn-default btn-primary">
-                Next step
-                <span class="glyphicon glyphicon-triangle-right glyphicon-align-right aria-hidden="true"></span>
+                Checkout <span class="glyphicon glyphicon-shopping-cart glyphicon-align-right" aria-hidden="true"></span>
             </button>
         </div>
-    </div>
 </div>
     <script
         src="http://code.jquery.com/jquery-3.2.1.min.js"
