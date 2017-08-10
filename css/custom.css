@@ -10,20 +10,20 @@ html, body {
     padding:0;
 }
 
-.jumbotron {
+.hero-pizza {
     background-image: url("../img/pizza.png");
     background-repeat: no-repeat;
     background-size: cover;
     margin-bottom:0;
 }
 
-.jumbotron .container {
+.hero-pizza .container {
     padding:0;
     margin:0;
     width:100%;
 }
 
-h1 {
+.hero-pizza-title {
     color:#7F7766;
     background-color:#E9DDCD;
     opacity:0.7;
