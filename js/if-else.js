@@ -37,16 +37,27 @@
 //     console.log(message);
 
 
-var name = "George";
-var total = 320;
-var discountedTotal = total * .9;
+// var name = "George";
+// var total = 320;
+// var discountedTotal = total * .9;
+//
+// if (total <= 200) {
+//     console.log("Hi " + name + "!");
+//     console.log("Your total is $" + total + ".");
+//     console.log("You are not receiving a discount.");
+// } else if (total > 200) {
+//     console.log("Hi " + name + "!");
+//     console.log("Your total without the discount is $" + total + ".");
+//     console.log("Your total with the discount is $" + discountedTotal + ".");
+// }
 
-if (total <= 200) {
-    console.log("Hi " + name + "!");
-    console.log("Your total is $" + total + ".");
-    console.log("You are not receiving a discount.");
-} else if (total > 200) {
-    console.log("Hi " + name + "!");
-    console.log("Your total without the discount is $" + total + ".");
-    console.log("Your total with the discount is $" + discountedTotal + ".");
+var flipACoin = Math.floor(Math.random()* 2);
+
+if (flipACoin === 0) {
+    console.log("Buy a car!");
+} else {
+    console.log("Buy a house!");
 }
+
+var message = (flipACoin === 0) ? "Buy a car!" : "Buy a house!";
+    console.log(message);
