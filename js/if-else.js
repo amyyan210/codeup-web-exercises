@@ -51,13 +51,67 @@
 //     console.log("Your total with the discount is $" + discountedTotal + ".");
 // }
 
-var flipACoin = Math.floor(Math.random()* 2);
+// var flipACoin = Math.floor(Math.random()* 2);
+//
+// if (flipACoin === 0) {
+//     console.log("Buy a car!");
+// } else {
+//     console.log("Buy a house!");
+// }
+//
+// var message = (flipACoin === 0) ? "Buy a car!" : "Buy a house!";
+//     console.log(message);
 
-if (flipACoin === 0) {
-    console.log("Buy a car!");
+// var luckyNumber = Math.floor(Math.random()* 6);
+// var discount10 = 60 * .90;
+// var discount25 = 60 * .75;
+// var discount50 = 60 * .50;
+//
+// switch (luckyNumber) {
+//     case 0:
+//         console.log("Sorry, no discount today.");
+//         break;
+//     case 1:
+//         console.log("Congrats! You will receive a 10% discount, bringing your total from $60 to " + discount10 + "!");
+//         break;
+//     case 2:
+//         console.log("Congrats! You will receive a 25% discount, bringing your total from $60 to " + discount25 + "!");
+//         break;
+//     case 3:
+//         console.log("Sorry, no discount today.");
+//         break;
+//     case 4:
+//         console.log("Congrats! You will receive a 50% discount, bringing your total from $60 to " + discount50 + "!");
+//         break;
+//     case 5:
+//         console.log("Congrats! You won our biggest promotion and will get all of your groceries for free!");
+// }
+
+var userConfirm = true;
+
+if (userConfirm) {
+    var userNumber = prompt("Please type in a number.");
+
+    if (isNaN(userNumber)) {
+        alert("That is not a number. Please enter a number!");
+    } else {
+
+        if (userNumber % 2 === 1) {
+            alert("Your number is odd.");
+        } else {
+            alert("Your number is even.");
+        }
+
+        alert("Your number + 100 is " + (parseInt(userNumber) + 100) + ".");
+
+        if (userNumber > 0) {
+            alert("Your number is positive.");
+        } else if (userNumber < 0) {
+            alert("Your number is negative.");
+        } else {
+            alert("Your number is 0 and is neither positive or negative.");
+        }
+    }
 } else {
-    console.log("Buy a house!");
+    console.log(":(");
 }
-
-var message = (flipACoin === 0) ? "Buy a car!" : "Buy a house!";
-    console.log(message);
