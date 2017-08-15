@@ -8,10 +8,11 @@
 
 
     <script>
+        "use strict";
         console.log("Hello from inline JavaScript");
         alert("Welcome to my website!");
         var faveColor = prompt("What is your favorite color?");
-        alert("Cool! " + faveColor + " is my favorite color too!");
+        alert("Cool! " + faveColor.charAt(0).toUpperCase() + faveColor.slice(1) + " is my favorite color too!");
     </script>
 </body>
 </html>
