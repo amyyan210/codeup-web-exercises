@@ -1,5 +1,7 @@
 "use strict";
 
+// Used a for loop because we know how many repetitions we need
+
 // var i = 2;
 //
 // while (i < 65537) {
@@ -8,6 +10,9 @@
 // }
 
 //-------------------------------------------------------------------------------
+
+
+// Used a do-while loop on this one because we don't know how many times it will need to iterate, but we need it to iterate at least once.
 
 // This is how you get a random number between 50 and 100
 // var allCones = Math.floor(Math.random() * 50) + 50;
