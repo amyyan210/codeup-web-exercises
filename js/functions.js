@@ -11,10 +11,10 @@
 //  */
 
     function sayHello(name) {
-        console.log("Hello, " + name + "!");
+        return "Hello, " + name + "!";
     }
 
-    sayHello("Codeup");
+    alert(sayHello("Codeup"));
 
 
     /**
@@ -28,7 +28,7 @@
      */
 
     var helloMessage = sayHello("Amy");
-    console.log(helloMessage);
+    alert(helloMessage);
 
     var myName = "Amy";
     sayHello(myName);
@@ -40,7 +40,7 @@
 // 100 and stores it in a variable named random
 
     var random = Math.floor((Math.random() * 100) + 1);
-    console.log("Your random number is " + random + ".");
+    alert.log("Your random number is " + random + ".");
 
     /**
      * TODO:
@@ -61,7 +61,7 @@
         return message;
     }
 
-    console.log(isOdd(random));
+    alert.log(isOdd(random));
 
     console.log("----------------------");
 
@@ -77,16 +77,18 @@
      *  > calculateTip(0.20, 20) // returns 4
      */
 
-    function calculateTip(tipPercentage, bill) {
-        var tip = tipPercentage * bill;
-        var totalBill = tip + bill;
 
-        console.log("A " + tipPercentage * 100 + "% tip on your bill of " + bill + " is $" + tip + ", for a total bill of $" + totalBill + ".");
-    }
-
-    console.log(calculateTip(0.2, 100));
-
-    console.log("----------------------");
+//added return to be able to access outside of function
+//     function calculateTip(tipPercentage, bill) {
+//         var tip = tipPercentage * bill;
+//         var totalBill = tip + bill;
+//
+//         return "A " + tipPercentage * 100 + "% tip on your bill of " + bill + " is $" + tip + ", for a total bill of $" + totalBill + ".";
+//     }
+//
+//     console.log(calculateTip(0.2, 100));
+//
+//     console.log("----------------------");
 
 
     /**
@@ -94,6 +96,9 @@
      * prompt the user for the bill total and a percentage they would like to tip,
      * then display the dollar amount they should tip
      */
+
+
+// doesn't need arguments because user is entering?
 
     var tipPercentage = 0;
     var bill = 0;
@@ -108,14 +113,14 @@
         var totalBill = tip + bill;
 
         if (tipPercentage > 1) {
-            console.log("A " + tipPercentage + "% tip on your bill of $" + bill + " is $" + tipWithPercent + ", for a total bill of $" + totalBillWithPercent + ".");
+            return "A " + tipPercentage + "% tip on your bill of $" + bill + " is $" + tipWithPercent + ", for a total bill of $" + totalBillWithPercent + ".";
 
         } else {
-            console.log("A " + (tipPercentage * 100) + "% tip on your bill of " + bill + " is $" + tip + ", for a total bill of $" + totalBill + ".");
+            return "A " + (tipPercentage * 100) + "% tip on your bill of " + bill + " is $" + tip + ", for a total bill of $" + totalBill + ".";
         }
     }
 
-    console.log(calculateTip(tipPercentage, bill));
+    alert(calculateTip(tipPercentage, bill));
 
     console.log("----------------------");
 
