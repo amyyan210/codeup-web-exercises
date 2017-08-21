@@ -32,15 +32,18 @@ repeatStr(8, "hey");
 
 //JS Challenge Question #3
 
-function validPhoneNumber (userNumber) {
+function validPhoneNumber (n) {
 
-    if (userNumber == "(XXX) XXX-XXXX") {
-        console.log("true");
-    } else {
-        console.log("false");
-    }
+    return n.charAt(0) == "(" &&
+        n.charAt(4) == ")" &&
+        n.charAt(5) == " " &&
+        n.charAt(9) == "-" &&
+        n.length == 14 &&
+        !isNaN(n.substring(1,4)) &&
+        !isNaN(n.substring(6,9)) &&
+        !isNaN(n.substring(10,n.length));
 }
 
-validPhoneNumber("(222) 222-2222");
+console.log(validPhoneNumber("(210) 345-a465"));
 
 

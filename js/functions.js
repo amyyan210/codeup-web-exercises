@@ -40,7 +40,7 @@
 // 100 and stores it in a variable named random
 
     var random = Math.floor((Math.random() * 100) + 1);
-    alert.log("Your random number is " + random + ".");
+    alert("Your random number is " + random + ".");
 
     /**
      * TODO:
@@ -61,7 +61,7 @@
         return message;
     }
 
-    alert.log(isOdd(random));
+    alert(isOdd(random));
 
     console.log("----------------------");
 
@@ -100,25 +100,41 @@
 
 // doesn't need arguments because user is entering?
 
-    var tipPercentage = 0;
-    var bill = 0;
+    function calculateTip(tipPercentage, bill) {
 
-    function calculateTip() {
-
-        var tipPercentage = parseFloat(prompt("What percentage would you like to tip?"));
-        var bill = parseFloat(prompt("How much was your total bill?"));
         var tipWithPercent = (tipPercentage / 100) * bill;
         var tip = tipPercentage * bill;
         var totalBillWithPercent = tipWithPercent + bill;
         var totalBill = tip + bill;
 
-        if (tipPercentage > 1) {
-            return "A " + tipPercentage + "% tip on your bill of $" + bill + " is $" + tipWithPercent + ", for a total bill of $" + totalBillWithPercent + ".";
+        // if (tipPercentage > 1) {
+        //     return "A " + tipPercentage + "% tip on your bill of $" + bill + " is $" + tipWithPercent + ", for a total bill of $" + totalBillWithPercent + ".";
+        //
+        // } else {
+        //     return "A " + (tipPercentage * 100) + "% tip on your bill of " + bill + " is $" + tip + ", for a total bill of $" + totalBill + ".";
+        // }
 
-        } else {
-            return "A " + (tipPercentage * 100) + "% tip on your bill of " + bill + " is $" + tip + ", for a total bill of $" + totalBill + ".";
+        var tipPercentageFinal;
+        var tipFinal;
+        var totalBillFinal;
+
+        if(tipPercentage > 1) {
+            tipPercentageFinal = tipPercentage;
+            tipFinal = tipWithPercent;
+            totalBillFinal = totalBillWithPercent;
         }
+        else {
+            tipPercentageFinal = tipPercentage * 100;
+            tipFinal = tip;
+            totalBillFinal = totalBill;
+
+        }
+
+        return "A " + tipPercentageFinal + "% tip on your bill of $" + bill + " is $" + tipFinal + ", for a total bill of $" + totalBillFinal + ".";
     }
+
+    var tipPercentage = parseFloat(prompt("What percentage would you like to tip?"));
+    var bill = parseFloat(prompt("How much was your total bill?"));
 
     alert(calculateTip(tipPercentage, bill));
 
