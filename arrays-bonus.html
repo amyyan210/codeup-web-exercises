@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arrays Bonus</title>
+</head>
+<body>
+
+<script>
+
+    var array1 = [[1, 2], [3, 4], [4, 5], [9, 1]];
+    var array2 = [[10, 2], [11, -2], [2, 5], [9, 1]];
+    var array3 = [[10, 2], [11, -7], [2, 5], [9, 1]];
+
+    function findIndexWhereSumIs9 (arraysWithinArrays) {
+        for (var i = 0; i < arraysWithinArrays.length; i++) {
+            if (arraysWithinArrays[i][0] + arraysWithinArrays[i][1] === 9) {
+                return arraysWithinArrays.indexOf(i);
+            } else return "-1";
+        }
+    }
+
+    console.log(findIndexWhereSumIs9(array3));
+
+//    findIndexWhereSumIs9([[1, 2], [3, 4], [4, 5], [9, 1]]) // returns 2
+//    findIndexWhereSumIs9([[10, 2], [11, -2], [2, 5], [9, 1]]) // returns 1
+//    findIndexWhereSumIs9([[10, 2], [11, -7], [2, 5], [9, 1]]) // returns -1
+
+</script>
+</body>
+</html>
