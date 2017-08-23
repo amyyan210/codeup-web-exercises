@@ -1,5 +1,5 @@
-// (function(){
-//     "use strict";
+(function(){
+    "use strict";
 //
 //     /**
 //      * TODO:
@@ -22,17 +22,20 @@
 //      * person.sayHello() // returns "Hello from Rick Sanchez!"
 //      */
 //
-//     var person = {
-//         firstName: "Amy",
-//         lastName: "Yanaway",
-//         sayHello: sayHelloFx
-//     };
-//
-//     function sayHelloFx () {
-//         return "Hello from " + person.firstName + " " + person.lastName + "!";
-//     }
-//
-//     console.log(person.sayHello());
+    var person = {
+        firstName: "Amy",
+        lastName: "Yanaway",
+        sayHello: sayHelloFx
+    };
+
+
+    function sayHelloFx () {
+        return "Hello from " + this.firstName + " " + this.lastName + "!";
+    }
+
+    //or person.sayHello = function sayHelloFX etc...
+
+    console.log(person.sayHello());
 //
 //     /** TODO: Remember this problem from before?
 //      *
@@ -49,24 +52,24 @@
 //      */
 //
 //
-//     var shoppers = [
-//         {name: 'Cameron', amount: 180},
-//         {name: 'Ryan', amount: 250},
-//         {name: 'George', amount: 320}
-//     ];
-//
-//     var dollarAmountForSale = 200;
-//
-//     shoppers.forEach (function (shopper) {
-//         var discountedTotal = shopper.amount * .9;
-//         var message;
-//         if (shopper.amount > dollarAmountForSale) {
-//             message = shopper.name + ", you spent $" + shopper.amount + ". After your 10% discount, your total is $" + discountedTotal + ".";
-//         } else {
-//             message = shopper.name + ", unfortunately you do not receive a discount. Your total is $" + shopper.amount + ".";
-//         }
-//         console.log(message);
-//     });
-//
-//
-// })();
+    var shoppers = [
+        {name: 'Cameron', amount: 180},
+        {name: 'Ryan', amount: 250},
+        {name: 'George', amount: 320}
+    ];
+
+    var dollarAmountForSale = 200;
+
+    shoppers.forEach (function (shopper) {
+        var discountedTotal = shopper.amount * .9;
+        var message;
+        if (shopper.amount > dollarAmountForSale) {
+            message = shopper.name + ", you spent $" + shopper.amount + ". After your 10% discount, your total is $" + discountedTotal + ".";
+        } else {
+            message = shopper.name + ", unfortunately you do not receive a discount. Your total is $" + shopper.amount + ".";
+        }
+        console.log(message);
+    });
+
+
+})();
