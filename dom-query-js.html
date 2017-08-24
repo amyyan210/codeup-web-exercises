@@ -59,9 +59,12 @@
          var subParagraphs = document.getElementsByClassName("sub-paragraph");
 
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-        for (var i = 0; i < subParagraphs.length; i++) {
-            subParagraphs[i].innerText = "Mission Accomplished!";
-        }
+//        for (var i = 0; i < subParagraphs.length; i++) {
+//            subParagraphs[i].innerText = "Mission Accomplished!";
+//        }
+
+        // OR
+        subParagraphs[0].innerHTML = "Mission Accomplished!";
 
     })();
 </script>
