@@ -4,7 +4,7 @@
     // Set our map options
     var mapOptions = {
         // Set the zoom level
-        zoom: 15,
+        zoom: 18,
 
         // This sets the center of the map at our location
         center: {
@@ -42,6 +42,14 @@
                 position: point,
                 map: map
             });
+
+            // Create a new infoWindow object with content
+            var infowindow = new google.maps.InfoWindow({
+                content: "Mike's Pastry"
+            });
+
+            infowindow.open(map, marker);
+
         } else {
 
             // Show an error message with the status if our request fails
