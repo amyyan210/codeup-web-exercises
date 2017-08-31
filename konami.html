@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Konami Code</title>
+</head>
+<body>
+<h1>Konami Code</h1>
+
+<script src="js/jquery-2.2.4.min.js"></script>
+<script>
+    "use strict";
+
+    function onKonamiCode(cb) {
+        var input = '';
+        var key = '38384040373937396665';
+        document.addEventListener('keydown', function (e) {
+            input += ("" + e.keyCode);
+            if (input === key) {
+                return cb();
+            }
+            if (!key.indexOf(input)) return;
+            input = ("" + e.keyCode);
+        });
+    }
+
+    onKonamiCode(function () {
+        $("body").css("background-image", "url('img/cats.jpg')");
+        alert('Get ready to JAM!');
+        var audio = new Audio("01 Bed Intruder Song (feat. Kelly Dodson).m4a");
+        audio.play();
+
+    });
+
+
+</script>
+</body>
+</html>
