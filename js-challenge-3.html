@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Challenge #3</title>
+</head>
+<body>
+
+
+<script>
+    "use strict";
+
+//    #1
+
+function compareArrays (array1, array2) {
+
+    var squaredArray1 = 0;
+    var cubedArray2 = 0;
+
+    for (var i = 0; i < array1.length; i++) {
+        squaredArray1 += Math.pow(i, 2);
+    }
+
+    for (var j = 0; j < array2.length; j++) {
+        cubedArray2 += Math.pow(i, 3);
+    }
+
+    if (squaredArray1 > cubedArray2) {
+        return false;
+    } else {
+        return true;
+    }
+
+}
+
+//    #2
+
+//function countMe (stringOfNumbers) {
+//
+//    var arrayOfNumbers = stringOfNumbers.split("");
+//
+//    var zero = [];
+//    var one = [];
+//    var two = [];
+//    var three = [];
+//    var four = [];
+//    var five = [];
+//    var six = [];
+//    var seven = [];
+//    var eight = [];
+//    var nine = [];
+//
+//    for (var i = 0; i < arrayOfNumbers.length; i++) {
+//        switch (i) {
+//            case "0":
+//                zero.push();
+//                break;
+//            case "1":
+//                one.push();
+//                break;
+//            case "2":
+//                two.push();
+//                break;
+//            case "3":
+//                three.push();
+//                break;
+//            case "4":
+//                four.push();
+//                break;
+//            case "5":
+//                five.push();
+//                break;
+//            case "6":
+//                six.push();
+//                break;
+//            case "7":
+//                seven.push();
+//                break;
+//            case "8":
+//                eight.push();
+//                break;
+//            case "9":
+//                nine.push();
+//                break;
+//
+//        return (+ i).join(",");
+//
+//        }
+//
+//    }
+//
+//}
+//
+//console.log(countMe("211213"));
+
+//    #3
+
+function personInfo (firstName, lastName) {
+     return firstName + " " + lastName;
+}
+
+
+</script>
+
+</body>
+</html>
