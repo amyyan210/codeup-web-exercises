@@ -9,7 +9,7 @@
             display: none;
         }
 
-        #alert {
+        .alert {
             border: 1px solid red;
         }
 
@@ -18,18 +18,21 @@
 </head>
 <body>
 
-<div id="alert">
-    <h1>Would you like to sign up for our newsletter? <span id="close"><sup> x </sup></span></h1>
+<div class="alert">
+    <span class="close"><strong> X </strong></span>
+    <h1>Would you like to sign up for our newsletter? </h1>
 </div>
 
-<div id="fadeInRegistration">
-<h2>Please register for our site!</h2>
-<form action="submit">
-    <input type="text" placeholder="Name"></input>
-    <input type="text" placeholder="Create username"></input>
-    <input type="text" placeholder="Create password"></input>
-</form>
-<button>Submit</button>
+<div class="fadeInRegistration alert">
+    <span class="close"><strong> X </strong></span>
+    <h2>Please register for our site! </h2>
+    <form action="submit">
+        <input type="text" placeholder="First name"></input>
+        <input type="text" placeholder="Last name"></input>
+        <input type="text" placeholder="Create username"></input>
+        <input type="text" placeholder="Create password"></input>
+    </form>
+    <button>Submit</button>
 </div>
 
 <h1>FAQ's about National Parks</h1>
@@ -106,7 +109,7 @@
 
         var definitionData = $("dd");
 
-        $("#hide").click(function () {
+        $(".hide").click(function () {
             $(definitionData).toggleClass("invisible");
         });
 
@@ -151,10 +154,10 @@
 
 
         // Hides newsletter alert when x is clicked
-        $("#close").on("click", closeAlert)
+        $(".close").on("click", closeAlert)
 
         function closeAlert() {
-            $("#alert").hide();
+            $(this).parent().hide();
         }
 
 
@@ -177,11 +180,11 @@
 
         //
 
-        $("#fadeInRegistration").hide();
+        $(".fadeInRegistration").hide();
 
         var delay = 8000;
         var timeoutId = setTimeout(function(){
-            $("#fadeInRegistration").fadeIn();
+            $(".fadeInRegistration").fadeIn();
         }, delay);
 
 
