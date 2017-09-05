@@ -9,15 +9,22 @@
             display: none;
         }
 
+        #alert {
+            border: 1px solid red;
+        }
 
 
     </style>
 </head>
 <body>
 
+<div id="alert">
+    <h1>Would you like to sign up for our newsletter? <span id="close"><sup> x </sup></span></h1>
+</div>
+
 <h1>FAQ's about National Parks</h1>
 
-<button type="submit">Hide</button>
+<button type="submit" class="hide">Hide</button>
 
 <dl>
 
@@ -53,6 +60,32 @@
 
 </dl>
 
+<ul>
+    <h3>Big Bend National Park</h3>
+    <ul>
+        <li>The square mileage of the park is larger than Rhode Island</li>
+        <li>Is home to more tropical species of butterflies than any other national park</li>
+        <li>Has its own natural jacuzzi called Langford Hot Springs</li>
+        <li>Covers 1,252 square miles in west Texas</li>
+    </ul>
+    <h3>Redwood National Park</h3>
+    <ul>
+        <li>The Redwood tree is the tallest tree on earth</li>
+        <li>Was signed into life by President Johnson</li>
+        <li>The park's size was doubled in 1978</li>
+        <li>The reason why redwood trees can grow so tall is that they grow so close to each other and their roots interweave.</li>
+    </ul>
+    <h3>Sequoia National Park</h3>
+    <ul>
+        <li>The first inhabitants were the Monache Indians</li>
+        <li>Was the nation's second national park established in 1890</li>
+        <li>The majority of the park is only accessible via horseback or on foot</li>
+        <li>The tallest mountain in the US, Mt. Whitney, is located here</li>
+    </ul>
+</ul>
+
+<button type="submit" id="highlight">Highlight</button>
+
 
 <script src="js/jquery-2.2.4.min.js"></script>
 
@@ -64,7 +97,7 @@
 
         var definitionData = $("dd");
 
-        $("button").click(function () {
+        $("#hide").click(function () {
             $(definitionData).toggleClass("invisible");
         });
 
@@ -74,7 +107,61 @@
             $(this).css("background-color", "yellow");
         });
 
-        
+
+        // Button that highlights the last li in each ul
+        $(".highlight").on("click", highlightAllLastListItems);
+
+        function highlightAllLastListItems () {
+            $("ul").each(highlightLastListItem);
+        }
+
+        function highlightLastListItem () {
+            $(this).children().last().css("background-color", "#FF0");
+        }
+
+
+        // Bolds li that are children of h3's
+        var $h3 = $("h3");
+
+        $($h3).on("click", makeAllListItemsBold);
+
+        function makeAllListItemsBold () {
+            $(this).next().children().css("font-weight", "bold");
+        }
+
+        // Changes first li of parent ul to blue when any li is clicked
+
+        var $li = $("li");
+
+
+        $($li).on("click", makeFirstSiblingBlue)
+
+        function makeFirstSiblingBlue () {
+            $(this).parent().children().first().css("color", "blue");
+            };
+
+
+        // Hides newsletter alert when x is clicked
+        $("#close").on("click", closeAlert)
+
+        function closeAlert() {
+            $("#alert").hide();
+        }
+
+
+        // UL's start hidden and slideToggle when corresponding h3's are clicked
+
+        $($h3).on("click", loopThroughUl);
+
+        function loopThroughUl () {
+            $(this).each(toggleUL)
+        }
+
+        function toggleUL () {
+            $(this).next().slideToggle();
+        }
+
+
     });
 
 
