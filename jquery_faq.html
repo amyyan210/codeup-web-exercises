@@ -22,6 +22,16 @@
     <h1>Would you like to sign up for our newsletter? <span id="close"><sup> x </sup></span></h1>
 </div>
 
+<div id="fadeInRegistration">
+<h2>Please register for our site!</h2>
+<form action="submit">
+    <input type="text" placeholder="Name"></input>
+    <input type="text" placeholder="Create username"></input>
+    <input type="text" placeholder="Create password"></input>
+</form>
+<button>Submit</button>
+</div>
+
 <h1>FAQ's about National Parks</h1>
 
 <button type="submit" class="hide">Hide</button>
@@ -60,7 +70,6 @@
 
 </dl>
 
-<ul>
     <h3>Big Bend National Park</h3>
     <ul>
         <li>The square mileage of the park is larger than Rhode Island</li>
@@ -82,7 +91,7 @@
         <li>The majority of the park is only accessible via horseback or on foot</li>
         <li>The tallest mountain in the US, Mt. Whitney, is located here</li>
     </ul>
-</ul>
+
 
 <button type="submit" id="highlight">Highlight</button>
 
@@ -151,7 +160,11 @@
 
         // UL's start hidden and slideToggle when corresponding h3's are clicked
 
-        $($h3).on("click", loopThroughUl);
+        var $ul = $("ul");
+
+        $h3.on("click", loopThroughUl);
+
+        $ul.hide();
 
         function loopThroughUl () {
             $(this).each(toggleUL)
@@ -160,6 +173,16 @@
         function toggleUL () {
             $(this).next().slideToggle();
         }
+
+
+        //
+
+        $("#fadeInRegistration").hide();
+
+        var delay = 8000;
+        var timeoutId = setTimeout(function(){
+            $("#fadeInRegistration").fadeIn();
+        }, delay);
 
 
     });
