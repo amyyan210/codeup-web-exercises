@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Challenge Week 4</title>
+</head>
+<body>
+
+<script src="js/jquery-2.2.4.min.js"></script>
+<script>
+
+(function(){
+"use strict";
+
+// #1
+    var numbersArray = [];
+    var target;
+
+    function returnIndices (array, number) {
+        for (var i = 0; i < array.length; i++) {
+            numbersArray.push(array[i]);
+            target = number;
+
+            if (array[i] + array[i + 1] === number) {
+                return array.indexOf(i);
+            }
+        }
+    }
+
+    console.log(returnIndices([2, 7, 11, 15], 9));
+
+
+
+
+// #2
+
+    function convertToRomanNumeral (number) {
+        var numberString = number.toString();
+        var numberArray = numberString.split("");
+
+        for (var i = 0; i < numberArray.length; i++) {
+            console.log(numberArray[i]);
+            switch (numberArray) {
+                case numberArray[i] == 1:
+                    return "I";
+                    break;
+                case numberArray[i] == 2:
+                    return "II";
+                    break;
+                case numberArray[i] == 3:
+                    return "III";
+                    break;
+                case numberArray[i] == 4:
+                    return "IV";
+                    break;
+                case numberArray[i] == 5:
+                    return "V";
+                    break;
+                case numberArray[i] == 6:
+                    return "VI";
+                    break;
+                case numberArray[i] == 7:
+                    return "VII";
+                    break;
+                case numberArray[i] == 8:
+                    return "VIII";
+                    break;
+                case numberArray[i] == 9:
+                    return "IX";
+                    break;
+                case numberArray[i] == 10:
+                    return "X";
+                    break;
+            }
+        }
+    }
+
+    console.log(convertToRomanNumeral(130));
+
+
+
+// #3
+
+
+})();
+
+</script>
+</body>
+</html>
