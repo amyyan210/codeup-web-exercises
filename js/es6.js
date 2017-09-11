@@ -42,14 +42,14 @@ const languages = ["Java", "Javascript", "CSS", "HTML"];
 //const name = "Simone"; returns "Uncaught SyntaxError: Identifier 'name' has already been declared
 
 // TODO: rewrite the object literal using object property shorthand
-users.push(
-  // JS 5
+users.push({
+  // ES 5
   // name: name,
   // email: email,
   // languages: languages
 
   // ES 6
-{   name,
+    name,
     email,
     languages
 });
@@ -60,7 +60,7 @@ let names = [];
 
 // TODO: rewrite the following using arrow functions
 
-// JS 5
+// ES 5
 // users.forEach(function(user) {
 //   return emails.push(user.email);
 // });
@@ -68,7 +68,7 @@ let names = [];
 // ES 6
 users.forEach((user) => emails.push(user.email));
 
-// JS 5
+// ES 5
 // users.forEach(function(user) {
 //   return names.push(user.name);
 // });
@@ -85,23 +85,29 @@ users.forEach(function(user) {
   // TODO: rewrite the code below to use object destructuring assignment
   //       note that you can also use destructuring assignment in the function
   //       parameter definition
-  const name = user.name;
-  const email = user.email;
-  const languages = user.languages;
 
+  // ES 5
+  // const name = user.name;
+  // const email = user.email;
+  // const languages = user.languages;
+
+  // ES 6
+  const {name, email, languages} = user;
 
 
   // TODO: rewrite the assignment below to use template strings
   developers.push(`${name}'s email is ${email}. ${name} knows ${languages.join(', ')}.`);
-});
 
 // TODO: Use `let` for the following variable
 let list = '<ul>';
 
 // TODO: rewrite the following loop to use a for..of loop
-developers.forEach(function (developer) {
+    //ES 5
+    // developers.forEach(function (developer) {
 
+    //ES 6
+  for (let developer of developers) {
   // TODO: rewrite the assignment below to use template strings
-  list += `<li> ${developer} </li>`;
-});
-list += `</ul>`;
+    list += `<li>${developer}</li>`;
+  }
+    list += '</ul>';
