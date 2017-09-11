@@ -82,21 +82,22 @@ let developers = [];
 
 
 users.forEach(function(user) {
-  // TODO: rewrite the code below to use object destructuring assignment
-  //       note that you can also use destructuring assignment in the function
-  //       parameter definition
+    // TODO: rewrite the code below to use object destructuring assignment
+    //       note that you can also use destructuring assignment in the function
+    //       parameter definition
 
-  // ES 5
-  // const name = user.name;
-  // const email = user.email;
-  // const languages = user.languages;
+    // ES 5
+    // const name = user.name;
+    // const email = user.email;
+    // const languages = user.languages;
 
-  // ES 6
-  const {name, email, languages} = user;
+    // ES 6
+    const {name, email, languages} = user;
 
 
-  // TODO: rewrite the assignment below to use template strings
-  developers.push(`${name}'s email is ${email}. ${name} knows ${languages.join(', ')}.`);
+    // TODO: rewrite the assignment below to use template strings
+    developers.push(`${name}'s email is ${email}. ${name} knows ${languages.join(', ')}.`);
+});
 
 // TODO: Use `let` for the following variable
 let list = '<ul>';
@@ -106,8 +107,9 @@ let list = '<ul>';
     // developers.forEach(function (developer) {
 
     //ES 6
-  for (let developer of developers) {
-  // TODO: rewrite the assignment below to use template strings
+for (let developer of developers) {
+    // TODO: rewrite the assignment below to use template strings
     list += `<li>${developer}</li>`;
-  }
-    list += '</ul>';
+}
+
+list += '</ul>';
