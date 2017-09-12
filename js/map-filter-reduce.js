@@ -58,7 +58,7 @@ console.log(userEmails);
 // Use .reduce to transform the array into an object where the object's keys are ids and the values are objects that represent each user
 
 let objects = users.reduce(function(obj, user){
-    obj[user.id] = user.name;
+    obj[user.id] = user;
     return obj;
 }, {});
 
